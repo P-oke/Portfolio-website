@@ -46,6 +46,7 @@ header {
 .nav-link:hover {
   border-bottom: 3px solid #fa5335;
 }
+
 .active {
   border-bottom: 3px solid #fa5335;
 }
