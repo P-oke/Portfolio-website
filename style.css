@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
 :root {
   --text-color: #376bf8;
+  --primarycolor: #0d3374;
 }
 * {
   padding: 0;
@@ -10,26 +11,29 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
-  min-height: 100vh;
-}
-
-.container {
-  width: 95%;
-  margin: auto;
+  scroll-behavior: smooth;
 }
 
 header {
   color: #fa5335;
   font-size: 1.55rem;
 }
+
 /*nav-bar*/
+.nav-content {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.4s ease;
+}
 .nav-bar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 15px;
+  height: 100px;
 }
 
-.nav-links {
+.nav-elements .nav-links {
   list-style: none;
   display: flex;
 }
@@ -39,39 +43,51 @@ header {
 }
 .nav-link {
   text-decoration: none;
-  color: var(--text-color);
+  color: #fff;
   margin-right: 35px;
   font-size: 1.3rem;
 }
 .nav-link:hover {
   border-bottom: 3px solid #fa5335;
 }
-
 .active {
   border-bottom: 3px solid #fa5335;
 }
 
+.nav-content.sticky-nav {
+  background-color: var(--primarycolor);
+  height: 57px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
 .toggle-bar {
-  color: #333;
+  color: #fff;
   float: right;
   font-size: 24px;
   line-height: 1.2;
   cursor: pointer;
   display: none;
 }
+
 /*home*/
 .home-section {
+  background-color: var(--primarycolor);
+  color: #fff;
   display: grid;
+  align-items: center;
+  place-content: center;
   grid-template-columns: repeat(2, 1fr);
-  box-shadow: 7px 7px 7px #d9dff5;
+  padding-top: 100px;
+  padding-bottom: 15px;
 }
+
 .home-content {
-  margin-top: 135px;
+  margin-top: 30px;
   margin-left: 150px;
 }
 .home-content h3 {
   font-size: 25px;
-  color: var(--text-color);
+  color: #fff;
 }
 .home-content h1 {
   font-size: 55px;
@@ -88,23 +104,27 @@ header {
   color: #fff;
   text-decoration: none;
   padding: 12px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 20px;
 }
 .home-content a:hover {
   background-color: rgb(39, 39, 214);
 }
+
 .hero-img {
-  height: 400px;
+  display: block;
+  width: 40vw;
 }
 
 /*About */
-.about-section {
-  box-shadow: 7px 7px 7px #d9dff5;
+.section {
+  padding: 60px 7%;
 }
+
 .about-section h3 {
   color: var(--text-color);
   margin-top: 15px;
+  font-size: 27px;
 }
 .about-grid {
   display: grid;
@@ -142,17 +162,18 @@ header {
 
 /*Portfolio*/
 .portfolio-section {
-  margin-top: 20px;
-  box-shadow: 7px 7px 7px #d9dff5;
+  background-color: var(--primarycolor);
+  color: #fff;
 }
 .portfolio-section h3 {
-  color: var(--text-color);
+  color: #fff;
+  font-size: 27px;
 }
 
 .portfolio-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 25px;
   align-items: center;
 }
 .pf-image {
@@ -160,8 +181,9 @@ header {
   cursor: pointer;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0px 4px 25px rgba(156, 172, 182, 0.411);
+  box-shadow: 1px 1px 1px 1px rgba(106, 106, 192, 0.808);
   height: 385px;
+  margin-top: 7px;
 }
 .pf-image:hover {
   transform: scale(0.85);
@@ -170,7 +192,6 @@ header {
 
 /*Contact */
 .contact-section {
-  box-shadow: 7px 7px 7px #d9dff5;
   margin-top: 12px;
   display: flex;
   justify-content: space-around;
@@ -186,6 +207,7 @@ header {
 .contact-section h3 {
   text-align: center;
   color: var(--text-color);
+  font-size: 27px;
 }
 .phone {
   padding: 15px;
@@ -203,11 +225,13 @@ header {
 
 /*footer*/
 footer {
-  background-color: #7e9af7;
+  background-color: var(--primarycolor);
   margin-top: 15px;
   text-align: center;
+  padding: 10px;
 }
 .social-links a {
+  color: #fff;
   margin-right: 8px;
   font-size: 25px;
 }
@@ -216,35 +240,32 @@ footer {
   margin-bottom: 8px;
 }
 
-@media screen and (max-width: 600px) {
-  .container {
-    margin-left: 25px;
-    margin-right: 0;
-  }
+@media only screen and (max-width: 975px) {
   header {
     font-size: 17px;
   }
   .toggle-bar {
     display: block;
-    position: relative;
   }
-  .nav-links {
+  .nav-elements .nav-links {
     flex-direction: column;
     margin-top: 150px;
   }
+
   .nav-elements {
-    opacity: 0;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background-color: rgb(1, 2, 19);
     transition: 0.4s;
     top: 45px;
+    left: -100vw;
   }
 
   .nav-elements.active-nav {
-    opacity: 1;
+    left: 0;
   }
+
   .nav-item {
     text-align: center;
     margin-top: 5vh;
@@ -256,56 +277,38 @@ footer {
   /*home*/
   .home-section {
     grid-template-columns: 1fr;
-    box-shadow: none;
-  }
-  .home-content {
-    margin-top: 35px;
-    margin-left: 8px;
-    text-align: center;
-  }
-  .home-content h3 {
-    font-size: 20px;
-  }
-  .home-content h1 {
-    font-size: 25px;
+
+    place-items: center;
   }
 
-  .home-content h4 {
-    font-size: 19px;
-    margin-bottom: 12px;
-  }
-  .home-content a {
-    padding: 10px;
-    font-size: 13px;
-    margin-bottom: 5px;
+  .home-content {
+    margin-top: 60px;
+    margin-left: 5px;
+    margin-bottom: 15px;
     text-align: center;
   }
 
   .hero-img {
-    height: 210px;
-    width: 270px;
-    display: block;
+    width: 85vw;
+    max-width: 500px;
   }
 
   /*about*/
-  .about-section {
-    box-shadow: none;
-  }
+
   .about-grid {
     grid-template-columns: 1fr;
   }
+
   .about-info1,
   .about-info2 {
-    font-size: 0.73rem;
+    font-size: 0.89rem;
   }
   .tech-stack > img {
     height: 100px;
   }
 
   /*portfolio*/
-  .portfolio-section {
-    box-shadow: none;
-  }
+
   .portfolio-images {
     grid-template-columns: 1fr;
   }
@@ -316,10 +319,6 @@ footer {
     object-fit: cover;
   }
 
-  /*contact*/
-  .contact-section {
-    box-shadow: none;
-  }
   .contact-section a {
     padding: 6px;
     font-size: 9px;
@@ -343,5 +342,26 @@ footer {
     color: #fff;
     margin-bottom: 8px;
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .home-content h3 {
+    font-size: 35px;
+  }
+  .home-content h1 {
+    font-size: 30px;
+  }
+
+  .home-content h4 {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+  .home-content a {
+    padding: 15px;
+    font-size: 15px;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    text-align: center;
   }
 }
