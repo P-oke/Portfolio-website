@@ -291,6 +291,7 @@ footer {
   .hero-img {
     width: 85vw;
     max-width: 500px;
+    margin-top: 15px;
   }
 
   /*about*/
