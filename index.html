@@ -13,41 +13,43 @@
   </head>
   <body>
     <div class="container">
-      <nav class="nav-bar">
-        <header id="logo">
-          <h3>&lt;/<span>Paul</span>&gt;</h3>
-        </header>
+      <div class="nav-content">
+        <nav class="nav-bar">
+          <header id="logo">
+            <h3>&lt;/<span>Paul</span>&gt;</h3>
+          </header>
 
-        <!--nav-scetion-->
-        <div class="nav-elements">
-          <ul class="nav-links">
-            <li class="nav-item">
-              <a class="nav-link active active-nav" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
+          <!--nav-scetion-->
+          <div class="nav-elements">
+            <ul class="nav-links">
+              <li class="nav-item">
+                <a class="nav-link active active-nav" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="toggle-bar">
-          <i class="fa fa-bars"></i>
-        </div>
-      </nav>
+          <div class="toggle-bar">
+            <i class="fa fa-bars"></i>
+          </div>
+        </nav>
+      </div>
 
       <!--home section-->
       <section class="home-section" id="home">
         <div class="home-content">
           <h3>Hi There</h3>
           <h1>I'm <span>Oke Paul</span></h1>
-          <h4>A Software developer</h4>
-          <a href="./assets/Resume.pdf">RESUME</a>
+          <h4>And I'm a <span class="typing"></span></h4>
+          <a href="./assets/Resume.pdf" rel="noopener">RESUME</a>
         </div>
 
         <div class="home-img">
@@ -60,15 +62,15 @@
       </section>
 
       <!--About-->
-      <section class="about-section" id="about">
+      <section class="about-section section" id="about">
         <h3>Let's talk about me</h3>
         <div class="about-grid">
           <div class="about-content">
             <p class="about-info1">
-              I am a Software developer on a junoir level who has always been
-              thrilled on how web technologies work. These has always been my
-              source of motivation to learn about what encompasses the web and
-              the technologies that surrounds it.
+              I am a highly motivated, self-disciplined, self-taught Software
+              developer who has always been thrilled on how web technologies
+              work. These has always been my source of motivation to learn about
+              what encompasses the web and the technologies that surrounds it.
             </p>
             <p class="about-info2">
               My main objective is to be an exceptional individual committed to
@@ -90,7 +92,7 @@
       </section>
 
       <!--portfolio-->
-      <section class="portfolio-section" id="portfolio">
+      <section class="portfolio-section section" id="portfolio">
         <h3>Portfolio</h3>
         <p>Here are some of my works</p>
         <div class="portfolio-images">
@@ -121,13 +123,12 @@
       </section>
 
       <!--Contact-->
-      <section class="contact-section" id="contact">
+      <section class="contact-section section" id="contact">
         <h3>Contact me <i class="fa fa-arrow-right"></i></h3>
 
         <a href="mailto:paulayomikun@gmail.com">
           <i class="fa fa-envelope"> Send mail</i>
         </a>
-
         <div class="phone" onclick="window.open('tel:8127651594')">
           <i class="fa fa-phone"> +234 8127651594</i>
         </div>
@@ -163,6 +164,11 @@
         </div>
       </footer>
     </div>
+   
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+     <!-- typed library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
