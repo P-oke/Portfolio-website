@@ -118,7 +118,7 @@ header {
 
 /*About */
 .section {
-  padding: 60px 7%;
+  padding: 60px 8%;
 }
 
 .about-section h3 {
@@ -217,10 +217,12 @@ header {
 }
 .contact-section a:hover {
   background-color: rgb(39, 39, 214);
+  cursor: pointer;
 }
 
 .phone:hover {
   background-color: rgb(39, 39, 214);
+  cursor: pointer;
 }
 
 /*footer*/
@@ -284,14 +286,14 @@ footer {
   .home-content {
     margin-top: 60px;
     margin-left: 5px;
-    margin-bottom: 15px;
+    padding-bottom: 25px;
     text-align: center;
   }
 
   .hero-img {
     width: 85vw;
     max-width: 500px;
-    margin-top: 18px;
+    margin-top: 15px;
   }
 
   /*about*/
@@ -362,7 +364,8 @@ footer {
     padding: 15px;
     font-size: 15px;
     margin-top: 3px;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     text-align: center;
   }
 }
+
