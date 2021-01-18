@@ -5,8 +5,7 @@ const navcontent=document.querySelector(".nav-content")
 
 
 toggle.addEventListener("click", () => {
-    console.log("i");
-  links.classList.toggle("active-nav");
+     links.classList.toggle("active-nav");
 
 
   if (links.classList.contains("active-nav")){
