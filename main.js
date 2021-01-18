@@ -3,9 +3,9 @@ const links = document.querySelector(".nav-elements")
 const navlink=document.querySelectorAll(".nav-link")
 const navcontent=document.querySelector(".nav-content")
 
-
+  
 toggle.addEventListener("click", () => {
-     links.classList.toggle("active-nav");
+  links.classList.toggle("active-nav");
 
 
   if (links.classList.contains("active-nav")){
@@ -39,8 +39,7 @@ function linkaction (){
 window.addEventListener("scroll", ()=>{
   
   if(this.scrollY > 20 ){
-    console.log("hi");
-    navcontent.classList.add("sticky-nav")
+  navcontent.classList.add("sticky-nav")
  } else {
   navcontent.classList.remove("sticky-nav")
  }
