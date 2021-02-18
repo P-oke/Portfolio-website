@@ -181,10 +181,12 @@ header {
   cursor: pointer;
   border-radius: 13px;
   overflow: hidden;
-  box-shadow: 1px 1px 1px 1px rgba(142, 142, 231, 0.808);
+  box-shadow: 1px 1px 2px 1px rgba(142, 142, 231, 0.808);
   height: 385px;
-  width: 90%;
   margin-top: 7px;
+}
+.text-small {
+  font-size: 0.8rem;
 }
 .pf-image:hover {
   transform: scale(0.85);
